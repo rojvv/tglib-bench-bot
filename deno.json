@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "imports": {
+    "@mtkruto/mtkruto": "jsr:@mtkruto/mtkruto@^0.196.0",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.7",
+    "envalid": "npm:envalid@^8.2.0"
+  },
+  "unstable": ["kv"]
+}
