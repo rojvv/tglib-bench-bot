@@ -47,12 +47,12 @@ const html = (
 <table bordered striped>
     <thead>
     <tr>
-        <th scope="col">#</th>
-        <th scope="col">Library</th>
-        <th scope="col">Download</th>
-        <th scope="col">Upload</th>
-        <th scope="col">Date</th>
-        <th scope="col"></th>
+        <th scope="col" colspan="1">#</th>
+        <th scope="col" colspan="3">Library</th>
+        <th scope="col" colspan="2">Download</th>
+        <th scope="col" colspan="2">Upload</th>
+        <th scope="col" colspan="2">Date</th>
+        <th scope="col" colspan="2"></th>
     </tr>
           </thead>
           <tbody>
@@ -60,22 +60,22 @@ const html = (
   results.map((v, i) => (
     `
               <tr>
-                <td align="center">${
+                <td align="center" colspan="1">${
       i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1
     }</td>
-                <td align="center">
+                <td align="center" colspan="3">
                   <a href=${v.library.link}>${v.library.name}</a>
                 </td>
-                <td align="center">
+                <td align="center" colspan="2">
                   ${v.downloadMbps.toFixed(1)} MB/s
                 </td>
-                <td align="center">
+                <td align="center" colspan="2">
                   ${v.uploadMbps.toFixed(1)} MB/s
                 </td>
-                <td align="center">
+                <td align="center" colspan="2">
                   ${new Intl.DateTimeFormat().format(new Date(v.date))}
                 </td>
-                <td align="center">
+                <td align="center" colspan="2">
                   <a
                     href=${`https://github.com/rojvv/tglib-bench/tree/main/${v.library.slug}`}
                   >
