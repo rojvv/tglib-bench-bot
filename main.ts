@@ -44,7 +44,7 @@ const html = (
     uploadMbps: number;
   }[],
 ) => `
-<table>
+<table bordered>
     <thead>
     <tr>
         <th scope="col">#</th>
